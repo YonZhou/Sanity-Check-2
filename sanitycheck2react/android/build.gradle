@@ -29,5 +29,12 @@ allprojects {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
             url "$rootDir/../node_modules/react-native/android"
         }
+        maven {
+          url "s3://pdftron-maven/release"
+           credentials(AwsCredentials) {
+               accessKey AWS_ACCESS_KEY
+               secretKey AWS_SECRET_KEY
+           }
+        }
     }
 }
