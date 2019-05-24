@@ -7,8 +7,7 @@ import {
   PermissionsAndroid,
   BackHandler,
   NativeModules,
-  Alert,
-  FlatList
+  Alert
 } from 'react-native';
 
 // import { List, ListItem } from "react-native-elements";
@@ -16,7 +15,11 @@ import {
 import { DocumentView, RNPdftron } from 'react-native-pdftron';
 
 type Props = {};
-export default class App extends Component<Props> {
+
+export class Viewer extends Component<Props> {
+    static navigationOptions = {
+        header: null
+      };
 
   constructor(props) {
     super(props);
@@ -67,7 +70,8 @@ export default class App extends Component<Props> {
         { cancelable: true }
       )
     } else {
-      BackHandler.exitApp();
+      this.props.navigation.pop();
+      //BackHandler.exitApp();
     }
   }
 
@@ -103,3 +107,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
   }
 });
+
+export default Viewer

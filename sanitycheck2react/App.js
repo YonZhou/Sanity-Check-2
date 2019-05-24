@@ -8,118 +8,26 @@ import {
   PermissionsAndroid,
   BackHandler,
   NativeModules,
-  Alert,
-  FlatList,
-  Dimensions
+  Alert
 } from 'react-native';
 
+import {createStackNavigator, createAppContainer} from 'react-navigation';
 // import { List, ListItem } from "react-native-elements";
-
 import { DocumentView, RNPdftron } from 'react-native-pdftron';
+import FileBrowserList from './screens/FileBrowserList';
+import {Viewer as documentViewer} from './screens/viewer';
 
-  type Props = {};
-  const styles = StyleSheet.create({
-  
-    MainContainer :{
-        justifyContent: 'space-between',
-        flex:1,
-        //flexDirection: 'row',
-        // margin: 5,
-        alignItems: 'center',
-        width: Dimensions.get('window').width,
-        marginTop: (Platform.OS === 'ios') ? 20 : 0,
-    },
-    
-    imageView: {
-        height:250,
-        width:"50%",
-        //resizeMode: "cover",
-        margin: 7,
-        borderRadius : 7
-    },
-    
-    textView: {
-    
-        width:'100%', 
-        textAlignVertical:'center',
-        textAlign: 'center',
-        padding:10,
-        color: '#000'
-    }
-    
-    });
 
-  export default class FileBrowserList extends Component { 
+type Props = {};
 
-  constructor (props) { 
-    super (props);  
-    this.state = {
-                  filelist: []
-                  };
-  } 
+const MainNavigator = createStackNavigator({
+  Home: {screen: FileBrowserList},
+  Viewer: {screen: documentViewer}
+},
+{
+  initialRouteName: "Home"
+});
 
-  render () { 
-    console.log(this.state.filelist);
-    return (
-        <View style = {styles.MainContainer}>
-            <FlatList
-              data = {this.state.filelist}
-              ItemSeparatorComponent = {this.FileListItemSeperator.FileListItemSeperator}
-              renderItem = {({item}) =>
-                <View style = {styles.MainContainer}>
-                    <Image
-                      source = {{ uri:"http://10.0.3.2:8080/" + item.split('.').slice(0, -1).join('.') + ".png"}}
-                      style= {styles.imageView}/>
-                    <Text style={styles.textView}>{item}</Text>
-                </View>
-            
-              }
-            >
-            
-            </FlatList>
-        </View>
-    );
-  }
+const App = createAppContainer(MainNavigator);
+export default App;
 
-  FileListItemSeperator = () => {
-    return (
-        <View
-        style={{
-            height: .5,
-            width: "100%",
-            backgroundColor: "#000",
-        }}
-        />
-    );
-  }
-
-  webcall = () => {
-    return fetch("http://10.0.3.2:8080/getFiles")
-      .then((response) => response.json())
-      .then((responseJson) => {
-        parsedList = []
-        var re = /(?:\.([^.]+))?$/;
-        for(let index = 0; index < responseJson.length; index++){
-          var fileName = responseJson[index];
-          console.log(fileName);
-          console.log(re.exec(fileName));
-          if(re.exec(fileName)[1] == "pdf" || re.exec(fileName)[1] == "docx"){
-            parsedList.push(fileName);
-          }
-        }
-
-        this.setState({
-          filelist: parsedList
-        }, function() {
-          // In this block you can do something with new state.
-        });
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }
-
-  componentDidMount(){
-      this.webcall();
-  }
-};
