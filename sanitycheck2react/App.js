@@ -3,12 +3,14 @@ import {
   Platform,
   StyleSheet,
   Text,
+  Image,
   View,
   PermissionsAndroid,
   BackHandler,
   NativeModules,
   Alert,
-  FlatList
+  FlatList,
+  Dimensions
 } from 'react-native';
 
 // import { List, ListItem } from "react-native-elements";
@@ -19,30 +21,30 @@ import { DocumentView, RNPdftron } from 'react-native-pdftron';
   const styles = StyleSheet.create({
   
     MainContainer :{
-    
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         flex:1,
-        margin: 5,
+        //flexDirection: 'row',
+        // margin: 5,
+        alignItems: 'center',
+        width: Dimensions.get('window').width,
         marginTop: (Platform.OS === 'ios') ? 20 : 0,
-    
     },
     
     imageView: {
-    
-        width: '50%',
-        height: 100 ,
+        height:250,
+        width:"50%",
+        //resizeMode: "cover",
         margin: 7,
         borderRadius : 7
-    
     },
     
     textView: {
     
-        width:'50%', 
+        width:'100%', 
         textAlignVertical:'center',
+        textAlign: 'center',
         padding:10,
         color: '#000'
-    
     }
     
     });
@@ -64,8 +66,10 @@ import { DocumentView, RNPdftron } from 'react-native-pdftron';
               data = {this.state.filelist}
               ItemSeparatorComponent = {this.FileListItemSeperator.FileListItemSeperator}
               renderItem = {({item}) =>
-                <View style = {{flex:1, flexDirection:'row'}}>
-                    {/* <Image source = {{ uri: item.flow}} /> */}
+                <View style = {styles.MainContainer}>
+                    <Image
+                      source = {{ uri:"http://10.0.3.2:8080/" + item.split('.').slice(0, -1).join('.') + ".png"}}
+                      style= {styles.imageView}/>
                     <Text style={styles.textView}>{item}</Text>
                 </View>
             
@@ -93,8 +97,19 @@ import { DocumentView, RNPdftron } from 'react-native-pdftron';
     return fetch("http://10.0.3.2:8080/getFiles")
       .then((response) => response.json())
       .then((responseJson) => {
+        parsedList = []
+        var re = /(?:\.([^.]+))?$/;
+        for(let index = 0; index < responseJson.length; index++){
+          var fileName = responseJson[index];
+          console.log(fileName);
+          console.log(re.exec(fileName));
+          if(re.exec(fileName)[1] == "pdf" || re.exec(fileName)[1] == "docx"){
+            parsedList.push(fileName);
+          }
+        }
+
         this.setState({
-          filelist: responseJson
+          filelist: parsedList
         }, function() {
           // In this block you can do something with new state.
         });
