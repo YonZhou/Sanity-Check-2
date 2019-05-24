@@ -7,96 +7,104 @@ import {
   PermissionsAndroid,
   BackHandler,
   NativeModules,
-  Alert
+  Alert,
+  FlatList
 } from 'react-native';
+
+// import { List, ListItem } from "react-native-elements";
 
 import { DocumentView, RNPdftron } from 'react-native-pdftron';
 
-type Props = {};
-export default class App extends Component<Props> {
+  type Props = {};
+  const styles = StyleSheet.create({
+  
+    MainContainer :{
+    
+        justifyContent: 'center',
+        flex:1,
+        margin: 5,
+        marginTop: (Platform.OS === 'ios') ? 20 : 0,
+    
+    },
+    
+    imageView: {
+    
+        width: '50%',
+        height: 100 ,
+        margin: 7,
+        borderRadius : 7
+    
+    },
+    
+    textView: {
+    
+        width:'50%', 
+        textAlignVertical:'center',
+        padding:10,
+        color: '#000'
+    
+    }
+    
+    });
 
-  constructor(props) {
-    super(props);
+  export default class FileBrowserList extends Component { 
 
+  constructor (props) { 
+    super (props);  
     this.state = {
-      permissionGranted: Platform.OS === 'ios' ? true : false
-    };
+                  filelist: []
+                  };
+  } 
 
-    RNPdftron.initialize("demo:yzhou@pdftron.com:7458c53d015f540837d0782dcc022ec2e8f2864adea4cc4f8a");
-  }
-
-  componentDidMount() {
-    if (Platform.OS === 'android') {
-      this.requestStoragePermission();
-    }
-  }
-
-  async requestStoragePermission() {
-    try {
-      const granted = await PermissionsAndroid.request(
-        PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE
-      );
-      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-        this.setState({
-          permissionGranted: true
-        });
-        console.log("Storage permission granted");
-      } else {
-        this.setState({
-          permissionGranted: false
-        });
-        console.log("Storage permission denied");
-      }
-    } catch (err) {
-      console.warn(err);
-    }
-  }
-
-  onLeadingNavButtonPressed = () => {
-    console.log('leading nav button pressed');
-    if (Platform.OS === 'ios') {
-      Alert.alert(
-        'App',
-        'onLeadingNavButtonPressed',
-        [
-          {text: 'OK', onPress: () => console.log('OK Pressed')},
-        ],
-        { cancelable: true }
-      )
-    } else {
-      BackHandler.exitApp();
-    }
-  }
-
-  render() {
-    if (!this.state.permissionGranted) {
-      return (
-        <View style={styles.container}>
-          <Text>
-            Storage permission required.
-          </Text>
-        </View>
-      )
-    }
-
-    const path = "https://pdftron.s3.amazonaws.com/downloads/pdfref.pdf";
-
+  render () { 
+    console.log(this.state.filelist);
     return (
-      <DocumentView
-        document={"https://pdftron.s3.amazonaws.com/downloads/pdfref.pdf"}
-        showLeadingNavButton={true}
-        leadingNavButtonIcon={Platform.OS === 'ios' ? 'ic_close_black_24px.png' : 'ic_arrow_back_white_24dp'}
-        onLeadingNavButtonPressed={this.onLeadingNavButtonPressed}
-      />
+        <View style = {styles.MainContainer}>
+            <FlatList
+              data = {this.state.filelist}
+              ItemSeparatorComponent = {this.FileListItemSeperator.FileListItemSeperator}
+              renderItem = {({item}) =>
+                <View style = {{flex:1, flexDirection:'row'}}>
+                    {/* <Image source = {{ uri: item.flow}} /> */}
+                    <Text style={styles.textView}>{item}</Text>
+                </View>
+            
+              }
+            >
+            
+            </FlatList>
+        </View>
     );
   }
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+  FileListItemSeperator = () => {
+    return (
+        <View
+        style={{
+            height: .5,
+            width: "100%",
+            backgroundColor: "#000",
+        }}
+        />
+    );
   }
-});
+
+  webcall = () => {
+    return fetch("http://10.0.3.2:8080/getFiles")
+      .then((response) => response.json())
+      .then((responseJson) => {
+        this.setState({
+          filelist: responseJson
+        }, function() {
+          // In this block you can do something with new state.
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
+
+  componentDidMount(){
+      this.webcall();
+  }
+};
