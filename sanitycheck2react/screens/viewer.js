@@ -86,7 +86,7 @@ export class Viewer extends Component<Props> {
       )
     }
 
-    const path = "https://pdftron.s3.amazonaws.com/downloads/pdfref.pdf";
+    const path = "http://10.0.3.2:8080/" + this.props.navigation.getParam('documentID');
 
     return (
       <DocumentView

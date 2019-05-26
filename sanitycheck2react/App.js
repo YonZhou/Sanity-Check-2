@@ -19,7 +19,7 @@ import {Viewer as documentViewer} from './screens/viewer';
 
 
 type Props = {};
-
+console.disableYellowBox = true;
 const MainNavigator = createStackNavigator({
   Home: {screen: FileBrowserList},
   Viewer: {screen: documentViewer}

@@ -88,7 +88,9 @@ export default class FileBrowserList extends React.Component {
   
     _onPress = (name) => {
       console.log(name);
-      this.props.navigation.push('Viewer');
+      this.props.navigation.push('Viewer', {
+        documentID: name
+      });
     }
   
     FileListItemSeperator = () => {
