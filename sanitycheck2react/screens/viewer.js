@@ -61,14 +61,8 @@ export class Viewer extends Component<Props> {
   onLeadingNavButtonPressed = () => {
     console.log('leading nav button pressed');
     if (Platform.OS === 'ios') {
-      Alert.alert(
-        'App',
-        'onLeadingNavButtonPressed',
-        [
-          {text: 'OK', onPress: () => console.log('OK Pressed')},
-        ],
-        { cancelable: true }
-      )
+      this.props.navigation.pop();
+
     } else {
       this.props.navigation.pop();
       //BackHandler.exitApp();
@@ -86,7 +80,7 @@ export class Viewer extends Component<Props> {
       )
     }
 
-    const path = "http://10.0.3.2:8080/" + this.props.navigation.getParam('documentID');
+    const path = "http://laptop-ejbj9ok5:8080/" + this.props.navigation.getParam('documentID');
 
     return (
       <DocumentView

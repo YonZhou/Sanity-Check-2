@@ -42,6 +42,7 @@
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		88FB2A604E73464D975C3047 /* libRNPdftron.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3AD73A1D6B44EB4A40898CB /* libRNPdftron.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		BC16E7D0229C54F800834AAF /* ic_close_black_24px.png in Resources */ = {isa = PBXBuildFile; fileRef = BC16E7A7229C54F800834AAF /* ic_close_black_24px.png */; };
 		C8105A9DCE094FB790D95E32 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D863651B116244D9B9FE1E30 /* libRNGestureHandler.a */; };
 		C839C9D42F448A5CD28EDF6B /* libPods-sanitycheck2react-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 415A71D1D6248076B3666E07 /* libPods-sanitycheck2react-tvOSTests.a */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
@@ -379,6 +380,7 @@
 		92ACC044E3949A2BB0F051FD /* Pods-sanitycheck2react.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sanitycheck2react.release.xcconfig"; path = "Pods/Target Support Files/Pods-sanitycheck2react/Pods-sanitycheck2react.release.xcconfig"; sourceTree = "<group>"; };
 		A0F0F7922F47FA271D3F9B2A /* Pods-sanitycheck2react-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sanitycheck2react-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sanitycheck2react-tvOSTests/Pods-sanitycheck2react-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		BC16E7A7229C54F800834AAF /* ic_close_black_24px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_close_black_24px.png; path = sanitycheck2react/ic_close_black_24px.png; sourceTree = "<group>"; };
 		C3AD73A1D6B44EB4A40898CB /* libRNPdftron.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNPdftron.a; sourceTree = "<group>"; };
 		C52F05724BBA0D7B04352FCC /* Pods-sanitycheck2react-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sanitycheck2react-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-sanitycheck2react-tvOS/Pods-sanitycheck2react-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		C9B3F47ABC574B8DBAB5854E /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
@@ -534,6 +536,7 @@
 		13B07FAE1A68108700A75B9A /* sanitycheck2react */ = {
 			isa = PBXGroup;
 			children = (
+				BC16E7A7229C54F800834AAF /* ic_close_black_24px.png */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -1184,6 +1187,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC16E7D0229C54F800834AAF /* ic_close_black_24px.png in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);

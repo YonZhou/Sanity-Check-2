@@ -74,7 +74,7 @@ export default class FileBrowserList extends React.Component {
                 <TouchableOpacity onPress = {() => this._onPress(item)}>
                   <View style = {styles.MainContainer}>
                       <Image
-                        source = {{ uri:"http://10.0.3.2:8080/" + item.split('.').slice(0, -1).join('.') + ".png"}}
+                        source = {{ uri:"http://laptop-ejbj9ok5:8080/" + item.split('.').slice(0, -1).join('.') + ".png"}}
                         style= {styles.imageView}/>
                       <Text style={styles.textView}>{item}</Text>
                   </View>
@@ -106,7 +106,7 @@ export default class FileBrowserList extends React.Component {
     }
   
     webcall = () => {
-      return fetch("http://10.0.3.2:8080/getFiles")
+      return fetch("http://laptop-ejbj9ok5:8080/getFiles")
         .then((response) => response.json())
         .then((responseJson) => {
           parsedList = []
