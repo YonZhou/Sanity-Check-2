@@ -1,0 +1,6 @@
+framework module PDFNet {
+  umbrella header "PDFNet.h"
+
+  export *
+  module * { export * }
+}

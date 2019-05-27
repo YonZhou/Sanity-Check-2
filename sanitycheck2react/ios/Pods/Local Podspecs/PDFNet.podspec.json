@@ -1,0 +1,51 @@
+{
+  "name": "PDFNet",
+  "version": "6.10.3.70547",
+  "homepage": "https://pdftron.com",
+  "authors": {
+    "PDFNet": "support@pdfnet.com"
+  },
+  "license": {
+    "type": "Commercial",
+    "file": "PDFNet.framework/LICENSE"
+  },
+  "summary": "The complete PDF toolkit.",
+  "description": "The complete PDF toolkit.",
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source": {
+    "http": "https://pdftron.s3.amazonaws.com/downloads/ios/cocoapods/pdfnet/6.10.3.70547.zip"
+  },
+  "preserve_paths": [
+    "PDFNet.framework",
+    "Tools.framework"
+  ],
+  "vendored_frameworks": [
+    "PDFNet.framework",
+    "Tools.framework"
+  ],
+  "resources": "Tools-Localization",
+  "libraries": [
+    "z",
+    "c++"
+  ],
+  "xcconfig": {
+    "FRAMEWORK_SEARCH_PATHS": "\"$(PODS_ROOT)/PDFNet/**\""
+  },
+  "frameworks": [
+    "QuartzCore",
+    "CoreText",
+    "CoreMedia",
+    "MediaPlayer",
+    "AVFoundation",
+    "CoreGraphics",
+    "Foundation",
+    "MobileCoreServices",
+    "SystemConfiguration",
+    "AssetsLibrary",
+    "UIKit",
+    "CoreImage"
+  ],
+  "requires_arc": true
+}

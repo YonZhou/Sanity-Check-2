@@ -1,0 +1,8 @@
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$(PODS_ROOT)/PDFNet/**" "${PODS_ROOT}/PDFNet"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_LDFLAGS = $(inherited) -l"c++" -l"z" -framework "AVFoundation" -framework "AssetsLibrary" -framework "CoreGraphics" -framework "CoreImage" -framework "CoreMedia" -framework "CoreText" -framework "Foundation" -framework "MediaPlayer" -framework "MobileCoreServices" -framework "PDFNet" -framework "QuartzCore" -framework "SystemConfiguration" -framework "Tools" -framework "UIKit"
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods

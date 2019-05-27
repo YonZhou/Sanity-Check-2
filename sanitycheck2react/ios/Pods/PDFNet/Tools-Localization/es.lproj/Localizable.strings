@@ -1,0 +1,200 @@
+/**
+ * This file is for reference only.
+ * It contains all the strings in the Tools framework which can be localized in your app.
+ * See the guide at https://www.pdftron.com/documentation/ios/guides/FAQ/localization for more info
+ */
+
+
+/* Add Bookmark */
+"+ Add Bookmark" = "+ Add Bookmark";
+
+/* Annotations
+ Annotations controller title */
+"Annotations" = "Annotations";
+
+/* Arrow tool name */
+"Arrow" = "Arrow";
+
+/* Bookmarks
+ Title of bookmarks list */
+"Bookmarks" = "Bookmarks";
+
+/* No comment provided by engineer. */
+"Cancel" = "Cancel";
+
+/* Clear a signature */
+"Clear" = "Clear";
+
+/* Close dialog */
+"Close" = "Close";
+
+/* Color */
+"Color" = "Color";
+
+/* No comment provided by engineer. */
+"Copy" = "Copy";
+
+/* No comment provided by engineer. */
+"Define" = "Define";
+
+/* No comment provided by engineer. */
+"Delete" = "Delete";
+
+/* No comment provided by engineer. */
+"Delete Page(s)?" = "Delete Page(s)?";
+
+/* No comment provided by engineer. */
+"Deselect All" = "Deselect All";
+
+/* No comment provided by engineer. */
+"Digital Signature" = "Digital Signature";
+
+/* Displays the digital signature's certificate information. */
+"Digital Signature Information" = "Digital Signature Information";
+
+/* Sign the document with a cryptographic certificate. */
+"Digitally Sign" = "Digitally Sign";
+
+/* No comment provided by engineer. */
+"Do you want to delete the selected page(s)? This action cannot be undone." = "Do you want to delete the selected page(s)? This action cannot be undone.";
+
+/* Dismiss annotation view controller
+ Done */
+"Done" = "Done";
+
+/* No comment provided by engineer. */
+"Edit Text" = "Edit Text";
+
+/* Ellipse tool name */
+"Ellipse" = "Ellipse";
+
+/* Ink tool name */
+"Eraser" = "Eraser";
+
+/* Colour with which to fill a shape. */
+"Fill Color" = "Fill Color";
+
+/* Highlight tool name */
+"Highlight" = "Highlight";
+
+/* Ink tool name */
+"Ink" = "Ink";
+
+/* JavaScript Alert. */
+"JavaScript Alert" = "JavaScript Alert";
+
+/* Line tool name */
+"Line" = "Line";
+
+/* No comment provided by engineer. */
+"Location" = "Location";
+
+/* The user's saved e-signature */
+"My Signature" = "My Signature";
+
+/* No comment provided by engineer. */
+"Name" = "Name";
+
+/* The user wants to create a new e-signature */
+"New Signature" = "New Signature";
+
+/* No digital signature information. */
+"No Information" = "No Information";
+
+/* Note tool name
+ The note associated with the PDF annotation. */
+"Note" = "Note";
+
+/* No comment provided by engineer. */
+"OK" = "OK";
+
+/* Opacity */
+"Opacity" = "Opacity";
+
+/* Outline
+ Outline view title */
+"Outline" = "Outline";
+
+/* Page */
+"Page" = "Page";
+
+/* For digital signatures. */
+"Pick a Photo" = "Pick a Photo";
+
+/* Abbreviation for point, as in font point size. */
+"pt" = "pt";
+
+/* No comment provided by engineer. */
+"Reason" = "Reason";
+
+/* Rectangle tool name */
+"Rectangle" = "Rectangle";
+
+/* No comment provided by engineer. */
+"Redact" = "Redact";
+
+/* No comment provided by engineer. */
+"Save" = "Save";
+
+/* For signatures
+ Save signature appearance. */
+"Save Appearance" = "Save Appearance";
+
+/* For digital signatures */
+"Save as My Signature" = "Save as My Signature";
+
+/* For text selection */
+"Select All" = "Select All";
+
+/* No comment provided by engineer. */
+"Selected" = "Selected";
+
+/* Where to drag their finger to apply a signature to the document. */
+"Sign Here" = "Sign Here";
+
+/* For digital signatures. */
+"Sign in the white area below, or pick a photo." = "Sign in the white area below, or pick a photo.";
+
+/* Signature tool name */
+"Signature" = "Signature";
+
+/* Squiggly tool name */
+"Squiggly" = "Squiggly";
+
+/* Strikeout tool name */
+"Strikeout" = "Strikeout";
+
+/* Line Color */
+"Stroke Color" = "Stroke Color";
+
+/* Annotation style */
+"Style" = "Style";
+
+/* Text tool name */
+"Text" = "Text";
+
+/* No comment provided by engineer. */
+"Text Color" = "Text Color";
+
+/* No comment provided by engineer. */
+"Text Search" = "Text Search";
+
+/* No comment provided by engineer. */
+"Text Size" = "Text Size";
+
+/* Line Thickness
+ Line thickness */
+"Thickness" = "Thickness";
+
+/* Annotation summary: no annotations in document. */
+"This document does not contain any annotations." = "This document does not contain any annotations.";
+
+/* No comment provided by engineer. */
+"This document does not\ncontain an outline." = "This document does not\ncontain an outline.";
+
+/* No comment provided by engineer. */
+"Type" = "Type";
+
+/* Underline tool name */
+"Underline" = "Underline";
+

@@ -1,0 +1,392 @@
+/**
+ * This file is for reference only.
+ * It contains all the strings in the Tools framework which can be localized in your app.
+ * See the guide at https://www.pdftron.com/documentation/ios/guides/FAQ/localization for more info
+ */
+
+/* App and document name as email subject */
+"%@ Document - %@" = "%1$@ Document - %2$@";
+
+/* Current page out of page count */
+"%d of %d" = "%1$d of %2$d";
+
+/* PTTextSearchViewController results count string */
+"%i of %i" = "%1$i of %2$i";
+
+/* No comment provided by engineer. */
+"Add Author" = "Add Author";
+
+/* Undo/redo action for multi-point annotations */
+"Add vertex" = "Add vertex";
+
+/* No comment provided by engineer. */
+"Add your name as an author to annotations you create. You can change this using the iOS Settings app." = "Add your name as an author to annotations you create. You can change this using the iOS Settings app.";
+
+/* Alert message for error deleting all pages */
+"All the pages in the document cannot be deleted." = "All the pages in the document cannot be deleted.";
+
+/* Annotations controller title */
+"Annotations" = "Annotations";
+
+/* Area tool name */
+"Area" = "Area";
+
+/* Arrow tool name */
+"Arrow" = "Arrow";
+
+/* Blend mode label in PTDiffViewController */
+"Blend mode" = "Blend mode";
+
+/* Title of bookmarks list */
+"Bookmarks" = "Bookmarks";
+
+/* No comment provided by engineer. */
+"Border Color" = "Border Color";
+
+/* Cancel alert label */
+"Cancel" = "Cancel";
+
+/* Alert title for error deleting all pages */
+"Cannot Delete All Pages" = "Cannot Delete All Pages";
+
+/* Clear a signature */
+"Clear" = "Clear";
+
+/* Close dialog */
+"Close" = "Close";
+
+/* Cloud tool name */
+"Cloud" = "Cloud";
+
+/* Color */
+"Color" = "Color";
+
+/* File comparison button label in PTDiffViewController */
+"Compare" = "Compare";
+
+/* No comment provided by engineer. */
+"Conflict" = "Conflict";
+
+/* Continuous view mode title */
+"Continuous" = "Continuous";
+
+/* No comment provided by engineer. */
+"Copy" = "Copy";
+
+/* Cover facing view mode title */
+"Cover Facing" = "Cover Facing";
+
+/* No comment provided by engineer. */
+"Define" = "Define";
+
+/* No comment provided by engineer. */
+"Delete" = "Delete";
+
+/* No comment provided by engineer. */
+"Delete Page(s)?" = "Delete Page(s)?";
+
+/* No comment provided by engineer. */
+"Deselect All" = "Deselect All";
+
+/* No comment provided by engineer. */
+"Digital Signature" = "Digital Signature";
+
+/* Displays the digital signature's certificate information. */
+"Digital Signature Information" = "Digital Signature Information";
+
+/* Sign the document with a cryptographic certificate. */
+"Digitally Sign" = "Digitally Sign";
+
+/* No comment provided by engineer. */
+"Do you want to delete the selected page(s)? This action cannot be undone." = "Do you want to delete the selected page(s)? This action cannot be undone.";
+
+/* No comment provided by engineer. */
+"Document is Encrypted" = "Document is Encrypted";
+
+/* No comment provided by engineer. */
+"Done" = "Done";
+
+/* No comment provided by engineer. */
+"Edit Text" = "Edit Text";
+
+/* Ellipse tool name */
+"Ellipse" = "Ellipse";
+
+/* Go to Page alert message */
+"Enter a page number (%d to %d)" = "Enter a page number (%1$d to %2$d)";
+
+/* No comment provided by engineer. */
+"Error" = "Error";
+
+/* Facing page view mode title */
+"Facing" = "Facing";
+
+/* File attachment tool name */
+"File Attachment" = "File Attachment";
+
+/* PTDiffViewController title */
+"File Comparison" = "File Comparison";
+
+/* File display color label in PTDiffViewController */
+"File display color" = "File display color";
+
+/* Colour with which to fill a shape. */
+"Fill Color" = "Fill Color";
+
+/* Go to Page alert title */
+"Go to Page" = "Go to Page";
+
+/* Highlight tool name */
+"Highlight" = "Highlight";
+
+/* Image Stamp tool name */
+"Image Stamp" = "Image Stamp";
+
+/* Ink tool name */
+"Ink" = "Ink";
+
+/* Invalid page number alert title */
+"Invalid page number" = "Invalid page number";
+
+/* JavaScript Alert. */
+"JavaScript Alert" = "JavaScript Alert";
+
+/* No comment provided by engineer. */
+"Label" = "Label";
+
+/* Line tool name */
+"Line" = "Line";
+
+/* No comment provided by engineer. */
+"Location" = "Location";
+
+/* Label for case-sensitive search toggle in PTTextSearchViewController */
+"Match\nCase" = "Match\nCase";
+
+/* The user's saved e-signature */
+"My Signature" = "My Signature";
+
+/* Person's Name */
+"Name" = "Name";
+
+/* The user wants to create a new e-signature */
+"New Signature" = "New Signature";
+
+/* No comment provided by engineer. */
+"Night Mode" = "Night Mode";
+
+/* No digital signature information. */
+"No Information" = "No Information";
+
+/* String to indicate no results found in text search */
+"No Results Found" = "No Results Found";
+
+/* Default view controller title for segmented control */
+"No Title" = "No Title";
+
+/* Note tool name
+   The note associated with the PDF annotation. */
+"Note" = "Note";
+
+/* OK alert label
+   OK title */
+"OK" = "OK";
+
+/* Opacity */
+"Opacity" = "Opacity";
+
+/* Open file attachment annotation */
+"Open" = "Open";
+
+/* Outline view title */
+"Outline" = "Outline";
+
+/* Overlay text for redaction annot */
+"Overlay text" = "Overlay text";
+
+/* Page number label
+   Page number label in PTTextSearchViewController search results table section headers
+   Page number title */
+"Page %d" = "Page %d";
+
+/* Page number placeholder */
+"Page number" = "Page number";
+
+/* No comment provided by engineer. */
+"Page Rotation" = "Page Rotation";
+
+/* Encrypted document password */
+"Password" = "Password";
+
+/* Perimeter tool name */
+"Perimeter" = "Perimeter";
+
+/* For digital signatures. */
+"Pick a Photo" = "Pick a Photo";
+
+/* No comment provided by engineer. */
+"Please enter the password to view the document" = "Please enter the password to view the document";
+
+/* Polygon tool name */
+"Polygon" = "Polygon";
+
+/* Polyline tool name */
+"Polyline" = "Polyline";
+
+/* Precision style view controller cell title */
+"Precision" = "Precision";
+
+/* Abbreviation for point, as in font point size. */
+"pt" = "pt";
+
+/* Reflow (reader) view mode title */
+"Reader" = "Reader";
+
+/* No comment provided by engineer. */
+"Reason" = "Reason";
+
+/* Rectangle tool name */
+"Rectangle" = "Rectangle";
+
+/* No comment provided by engineer. */
+"Redact" = "Redact";
+
+/* Redaction tool name
+   Text redaction annot */
+"Redaction" = "Redaction";
+
+/* Undo/redo action for multi-point annotations */
+"Remove vertex" = "Remove vertex";
+
+/* No comment provided by engineer. */
+"Rotate Pages" = "Rotate Pages";
+
+/* Ruler tool name */
+"Ruler" = "Ruler";
+
+/* No comment provided by engineer. */
+"Save" = "Save";
+
+/* For signatures
+   Save signature appearance. */
+"Save Appearance" = "Save Appearance";
+
+/* For digital signatures */
+"Save as My Signature" = "Save as My Signature";
+
+/* No comment provided by engineer. */
+"Saving error" = "Saving error";
+
+/* Scale style view controller cell title */
+"Scale" = "Scale";
+
+/* Search bar placeholder text in PTTextSearchViewController
+   Title of PTTextSearchViewController */
+"Search" = "Search";
+
+/* String to indicate that there is an active search in PTTextSearchViewController */
+"Searching..." = "Searching...";
+
+/* File select button title in PTDiffViewController */
+"Select" = "Select";
+
+/* File comparison label in PTDiffViewController */
+"Select a file to compare" = "Select a file to compare";
+
+/* For text selection */
+"Select All" = "Select All";
+
+/* No comment provided by engineer. */
+"Selected: %lu" = "Selected: %lu";
+
+/* Where to drag their finger to apply a signature to the document. */
+"Sign Here" = "Sign Here";
+
+/* For digital signatures. */
+"Sign in the white area below, or pick a photo." = "Sign in the white area below, or pick a photo.";
+
+/* Signature tool name */
+"Signature" = "Signature";
+
+/* Single page view mode title */
+"Single Page" = "Single Page";
+
+/* As in skip this step. */
+"Skip" = "Skip";
+
+/* Measurement tool snapping switch label */
+"Snapping" = "Snapping";
+
+/* Squiggly tool name */
+"Squiggly" = "Squiggly";
+
+/* Strikeout tool name */
+"Strikeout" = "Strikeout";
+
+/* Line Color */
+"Stroke Color" = "Stroke Color";
+
+/* Annotation style */
+"Style" = "Style";
+
+/* Text tool name */
+"Text" = "Text";
+
+/* No comment provided by engineer. */
+"Text Color" = "Text Color";
+
+/* Placeholder for text search bar */
+"Text Search" = "Text Search";
+
+/* No comment provided by engineer. */
+"Text Size" = "Text Size";
+
+/* No comment provided by engineer. */
+"There was a problem opening the file." = "There was a problem opening the file.";
+
+/* No comment provided by engineer. */
+"There was a problem saving your document. A backup copy was saved to %@" = "There was a problem saving your document. A backup copy was saved to %@";
+
+/* No comment provided by engineer. */
+"There was an error when trying to save the document." = "There was an error when trying to save the document.";
+
+/* Line Thickness
+   Line thickness */
+"Thickness" = "Thickness";
+
+/* Annotation summary: no annotations in document. */
+"This document does not contain any annotations." = "This document does not contain any annotations.";
+
+/* No comment provided by engineer. */
+"This document does not\ncontain an outline." = "This document does not\ncontain an outline.";
+
+/* No comment provided by engineer. */
+"This document is in conflict with an old version. The current version will be kept." = "This document is in conflict with an old version. The current version will be kept.";
+
+/* No comment provided by engineer. */
+"Thumbnail Viewer" = "Thumbnail Viewer";
+
+/* Thumbnails browser title */
+"Thumbnails" = "Thumbnails";
+
+/* No comment provided by engineer. */
+"Type" = "Type";
+
+/* Underline tool name */
+"Underline" = "Underline";
+
+/* No comment provided by engineer. */
+"Unsupported File" = "Unsupported File";
+
+/* No comment provided by engineer. */
+"View Mode" = "View Mode";
+
+/* View settings title */
+"Viewing Modes" = "Viewing Modes";
+
+/* Label for whole word search toggle in PTTextSearchViewController */
+"Whole\nWord" = "Whole\nWord";
+
+/* PTDiffViewController select files alert title */
+"You must select two files to compare" = "You must select two files to compare";
+
